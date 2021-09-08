@@ -106,3 +106,13 @@ body ul.pagination li {
   width: 30%;
   text-align: center;
 }
+body footer {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 15px;
+}
+body footer hr {
+  border: none;
+  border-top: 1px solid #A3FCF4;
+  width: 300px;
+}

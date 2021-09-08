@@ -13,9 +13,8 @@
             {{ else }}
                 {{ .Summary }}
             {{ end }}
-            <a href="{{ .RelPermalink }}">Read more</a>
+            {{ if .Truncated }}<a href="{{ .RelPermalink }}">Read more</a>{{ end }}
         </div>
-
     </section>
     {{ end }}
     {{ partial "paginator.html" .Paginator }}

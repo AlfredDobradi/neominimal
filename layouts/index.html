@@ -5,7 +5,7 @@
     {{ partial "header.html" . }}
     <div class="content">
         <main class="list">
-            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts").ByPublishDate }}
+            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts").ByPublishDate.Reverse }}
             {{ range $paginator.Pages }}
             <section class="list-item">
                 <div class="meta">

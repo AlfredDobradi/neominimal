@@ -78,6 +78,34 @@ body {
                 padding: 0 20px 0 0;
             }
         }
+
+        div.content {
+            p {
+                code {
+                    @include regular-text;
+                    color: $acctColor;
+                    &::before {
+                        content: "`";
+                    }
+                    &::after {
+                        content: "`";
+                    }
+                }
+            }
+        }
+
+        div.highlight {
+            padding: 0 15px;
+
+            pre {
+                border-radius: 5px;
+                padding: 10px 10px 12px;
+
+                code {
+                    font-size: 13px;
+                }
+            }
+        }
     }
 
     ul.pagination {

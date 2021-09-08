@@ -1,0 +1,10 @@
+{
+    "name": "neominimal",
+    "version": "0.1.0",
+    "private": true,
+    "license": "MIT",
+    "dependencies": {
+        "sass": "^1.39.0",
+        "normalize.css": "^8.0.0"
+    }
+}

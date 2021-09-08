@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+    <div class="content">
+        <main class="list">
+            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts").ByPublishDate }}
+            {{ range $paginator.Pages }}
+            <section class="list-item">
+                <div class="meta">
+                    <h3 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h3>
+                    <time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+                </div>
+                <div class="description">
+                    {{ if isset .Params "description" }}
+                        {{ .Description }}
+                    {{ else }}
+                        {{ .Summary }}
+                    {{ end }}
+                    {{ if .Truncated }}<a href="{{ .RelPermalink }}">Read more</a>{{ end }}
+                </div>
+
+            </section>
+            {{ end }}
+            {{ partial "paginator.html" .Paginator }}
+        </main>
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+@mixin regular-text {
+    font-family: "Cutive Mono";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+@mixin header-text {
+    font-family: "Open Sans Condensed";
+    font-weight: 700;
+}
+
+@mixin light-header-text {
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+}

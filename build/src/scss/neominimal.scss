@@ -1,0 +1,100 @@
+@import "_colors";
+@import "_fonts";
+
+body {
+    background: $bgColor;
+    color: $textColor;
+    @include regular-text;
+
+    h1 {
+        margin: 0;
+        padding: 10px 0;
+        color: $acctColor;
+        @include header-text;
+    }
+
+    h3 {
+        font-size: 32px;
+        color: $acctColor;
+        @include light-header-text;
+        margin: 30px 0 5px;
+    }
+
+    span.separator {
+        color: $acctColor;
+    }
+
+    a {
+        color: $linkColor;
+        text-decoration: none;
+        
+        &.nav-item {
+            text-transform: uppercase;
+
+            &::before {
+                content: "//";
+                padding: 0 5px 0 0;
+            }
+
+            &.active::before {
+                color: $textColor;
+            }
+        }
+
+        &:visited {
+            color: $linkColor;
+        }
+
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+
+    header {
+        padding: 0 50px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    main {
+        width: 960px;
+        margin: 0 auto;
+
+        div.meta {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: left;
+            border: none;
+            border-bottom: 1px solid $acctColor;
+            margin-bottom: 5px;
+
+            h3 {
+                padding: 0 20px 0 0;
+            }
+        }
+    }
+
+    ul.pagination {
+        font-size: 26px;
+        margin: 30px 0 0;
+        @include light-header-text;
+
+        list-style-type: none;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            width: 30%;
+            text-align: center;
+        }
+    }
+}

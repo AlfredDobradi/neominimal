@@ -1,0 +1,7 @@
+{{- if or .HasPrev .HasNext -}}
+<ul class="pagination">
+    <li class="prev">{{- if .HasPrev }}<a href="{{ .Prev.URL }}">Previous</a>{{- end -}}</li>
+    <li class="page">{{ .PageNumber }}</li>
+    <li class="next">{{- if .HasNext }}<a href="{{ .Next.URL }}">Next</a>{{- end -}}</li>
+</ul>
+{{- end -}}

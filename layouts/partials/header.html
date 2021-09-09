@@ -3,7 +3,7 @@
     {{ $currentPage := . }}
     <nav>
         {{ range .Site.Menus.main }}
-            <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq .URL $currentPage.RelPermalink) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (or (and (eq $currentPage.RelPermalink "/") (eq .URL "/")) (and (ne .URL "/") (hasPrefix $currentPage.RelPermalink .URL))) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         {{ end }}
     </nav>
 </header>

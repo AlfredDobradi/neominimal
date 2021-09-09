@@ -1,6 +1,17 @@
 {{ define "main" }}
 <main class="single">
-  <h3>{{ .Title }}</h3>
+ <div class="meta">
+    <h3 class="title">{{.Title}}</h3>
+    <time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+  </div>
+  {{ with .Params.topics }}
+  <div class="topics">
+    topics:
+    {{ range . }}
+    <a href='{{ "topics" | absURL}}/{{ . | urlize }}'>{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
   <div class="content">
     {{ .Content }}
   </div>

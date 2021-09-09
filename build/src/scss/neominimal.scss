@@ -79,6 +79,15 @@ body {
             }
         }
 
+        div.topics {
+            a::after {
+                content: ","
+            }
+            a:last-child::after {
+                content: ""
+            }
+        }
+
         div.content {
             p {
                 code {
@@ -90,6 +99,16 @@ body {
                     &::after {
                         content: "`";
                     }
+                }
+            }
+        }
+
+        div.taxonomy {
+            ul {
+                list-style-type: none;
+
+                li::before {
+                    content: "- ";
                 }
             }
         }

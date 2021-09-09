@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="taxonomies">
+    <div class="taxonomy">
+        <div class="meta">
+            <h3 class="title">{{ title .Data.Plural }}</h3>
+        </div>
+        <ul>
+            {{ $taxonomyName := .Data.Plural }}
+            {{ range .Data.Terms.ByCount }}
+                <li><a href="{{ "/" | relLangURL}}{{ $taxonomyName | urlize }}/{{ .Name | urlize }}">{{ .Name }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    <div> 
+</main>
+{{ end }}

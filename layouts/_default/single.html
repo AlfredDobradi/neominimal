@@ -8,7 +8,7 @@
   <div class="topics">
     topics:
     {{ range . }}
-    <a href='{{ "topics" | absURL}}/{{ . | urlize }}'>{{ . }}</a>
+    <a href='{{ "topics" | relURL}}/{{ . | urlize }}'>{{ . }}</a>
     {{ end }}
   </div>
   {{ end }}

@@ -101,6 +101,14 @@ body {
                     }
                 }
             }
+            h3 {
+                font-size: 26px;
+                @include light-header-text;
+            }
+            h4 {
+                font-size: 20px;
+                margin: 20px 0 0;
+            }
         }
 
         div.taxonomy {

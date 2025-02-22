@@ -27,22 +27,25 @@ body a {
   color: #FFBAFF;
   text-decoration: none;
 }
-body a.nav-item {
-  text-transform: uppercase;
-}
-body a {
-  color: #A3FCF4;
-}
 body a:visited {
-  color: #A3FCF4;
+  color: #FFBAFF;
 }
 body a:hover {
   color: #FF9EFF;
+}
+body a.nav-item {
+  text-transform: uppercase;
 }
 body a.nav-item::before {
   content: "//";
   padding: 0 5px 0 0;
   color: #FFBAFF;
+}
+body a.nav-item {
+  color: #A3FCF4;
+}
+body a.nav-item:hover {
+  color: #FF9EFF;
 }
 body header {
   padding: 0 50px;
